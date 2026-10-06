@@ -1,0 +1,224 @@
+:root {
+  --board-primary: #3659d9;
+  --board-primary-dark: #18307f;
+  --board-ink: #172033;
+  --board-surface: #f4f7fb;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--board-surface);
+  color: var(--board-ink);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--board-primary);
+  --bs-btn-border-color: var(--board-primary);
+  --bs-btn-hover-bg: var(--board-primary-dark);
+  --bs-btn-hover-border-color: var(--board-primary-dark);
+}
+
+.text-primary {
+  color: var(--board-primary) !important;
+}
+
+.page-center {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.board-navbar {
+  background: linear-gradient(100deg, #101d4f, #3659d9);
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.65rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: var(--board-primary-dark);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.brand-mark-large {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 20%);
+}
+
+.tracking-label {
+  letter-spacing: 0.18em;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(420px, 0.8fr);
+  background:
+    radial-gradient(circle at 15% 15%, rgb(85 124 255 / 55%), transparent 28rem),
+    linear-gradient(135deg, #101d4f, #263f9d 65%, #3659d9);
+}
+
+.login-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 8rem);
+  color: #fff;
+}
+
+.login-panel {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: rgb(244 247 251 / 92%);
+}
+
+.login-card {
+  width: min(100%, 31rem);
+  border-radius: 1.5rem;
+}
+
+.demo-accounts {
+  padding: 1rem;
+  border-radius: 0.85rem;
+  background: #f5f7fb;
+}
+
+.board-page {
+  max-width: 1600px;
+}
+
+.category-select {
+  width: 12rem;
+}
+
+.featured-notice {
+  position: relative;
+  min-height: 30rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 85% 20%, rgb(104 141 255 / 65%), transparent 22rem),
+    linear-gradient(135deg, #111d4b, #2745ac);
+  color: #fff;
+}
+
+.featured-accent {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0.5rem;
+  background: #ffcc57;
+}
+
+.featured-content {
+  position: relative;
+  z-index: 1;
+  max-width: 68rem;
+  padding: clamp(2rem, 5vw, 5rem);
+}
+
+.featured-content .lead {
+  color: rgb(255 255 255 / 80%);
+}
+
+.notice-content {
+  max-width: 55rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.priority-badge {
+  background: #ffcc57;
+  color: #453300;
+}
+
+.slide-count {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  background: rgb(0 0 0 / 25%);
+  color: rgb(255 255 255 / 80%);
+}
+
+.notice-preview {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.notice-preview:hover,
+.notice-preview.active {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 2rem rgb(31 52 120 / 15%) !important;
+}
+
+.notice-preview.active {
+  outline: 2px solid var(--board-primary);
+}
+
+.empty-state {
+  min-height: 20rem;
+  display: grid;
+  place-items: center;
+}
+
+.admin-page {
+  max-width: 1800px;
+}
+
+.admin-form-card {
+  top: 1.5rem;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .login-copy {
+    min-height: 35vh;
+    padding: 3rem 2rem;
+  }
+
+  .login-panel {
+    padding: 2rem 1rem 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-notice {
+    min-height: 34rem;
+  }
+
+  .featured-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .slide-count {
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+}
