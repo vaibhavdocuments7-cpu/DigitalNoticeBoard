@@ -61,7 +61,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
-builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
@@ -73,11 +72,6 @@ using (var scope = app.Services.CreateScope())
         builder.Configuration["DemoAccounts:AdminPassword"],
         builder.Configuration["DemoAccounts:ViewerPassword"],
         app.Lifetime.ApplicationStopping);
-}
-
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
 }
 
 app.UseMiddleware<ApiExceptionMiddleware>();

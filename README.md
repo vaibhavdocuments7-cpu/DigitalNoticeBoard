@@ -28,7 +28,7 @@ The backend projects are:
 
 Requirements:
 
-- .NET SDK 10
+- .NET SDK 8
 - Node.js 24 or a compatible current version
 - SQL Server LocalDB is optional
 
